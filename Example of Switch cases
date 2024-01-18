@@ -1,0 +1,19 @@
+import java.util.Scanner;
+public class play{
+    public static void main(String args[]){
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter the your choice :");
+        int value= sc.nextInt();
+        switch(value){
+            case 1: System.out.println("Enter your Name:");
+                    String name= sc.next();
+                    System.out.println("NAME:" +name);
+                    break;
+            case 2: System.out.println("Enter your age:");
+                    int age= sc.nextInt();
+                    System.out.println("AGE:"+age);
+                    break;
+            default: System.out.println("Enter Valid Choice.");
+        }
+    }
+}
