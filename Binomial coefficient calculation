@@ -1,0 +1,25 @@
+import java.util.Scanner;
+public class play{
+    public static int fact(int n){                                  //Calculation of factorial
+        int f=1;
+        for(int i=1;i<=n;i++){
+            f=f*i;
+        }
+        return f;
+    }
+    public static int bino(int n,int r){                          //Calculation of Binomial Coefficient
+        int fact_n= fact(n);
+        int fact_r= fact(r);
+        int fact_nr= fact(n-r);
+        int bino_coeff=(fact_n /(fact_r*fact_nr));
+        return bino_coeff;
+    }
+    public static void main(String args[]){                               //Input of data
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter the input Value for n and r:");
+        int n = sc.nextInt();
+        int r= sc.nextInt();
+        System.out.println(bino(n,r));
+
+    }
+}
